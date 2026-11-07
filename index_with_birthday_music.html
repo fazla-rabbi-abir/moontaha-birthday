@@ -1,0 +1,956 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Moontaha ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink: #ed9bbd;
+    --light: #fff4f8;
+    --purple: #b49adf;
+    --dark: #513b5c;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff8fb;
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+section {
+    padding: 85px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading small {
+    color: #d77fa7;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 45px);
+    margin-top: 12px;
+}
+
+.section-heading p {
+    margin-top: 12px;
+    color: #927f96;
+}
+
+/* Floating decorations */
+
+.float {
+    position: fixed;
+    bottom: -50px;
+    z-index: 0;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    opacity: .6;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Navigation */
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: #a85e89;
+}
+
+nav a {
+    color: #815a79;
+    text-decoration: none;
+    margin-left: 23px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+    padding: 110px 7% 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background:
+      radial-gradient(circle at 10% 20%, #fce0ed, transparent 35%),
+      radial-gradient(circle at 90% 80%, #e8ddfa, transparent 35%),
+      linear-gradient(135deg, #fff7fa, #f9edff);
+}
+
+.hero-content {
+    max-width: 750px;
+    z-index: 2;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: white;
+    color: #c26e99;
+    font-size: 12px;
+    letter-spacing: 2px;
+    box-shadow: 0 5px 20px #e6c6d955;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px, 12vw, 115px);
+    color: #c46d9b;
+    line-height: 1.3;
+    margin: 20px 0 5px;
+    text-shadow: 2px 5px 20px #e7afcf66;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(19px, 4vw, 28px);
+    color: #725779;
+    font-weight: 500;
+}
+
+.hero p {
+    margin: 20px auto 25px;
+    max-width: 500px;
+    line-height: 1.9;
+    color: #927e96;
+}
+
+.hero-image {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 7px;
+    background: white;
+    border: 2px solid #e9b5d0;
+    box-shadow: 0 10px 35px #cf93b866;
+    margin-top: 28px;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    50% { box-shadow: 0 10px 45px #d58ebd99; }
+}
+
+.primary-btn {
+    display: inline-block;
+    border: none;
+    background: linear-gradient(135deg, #d987ad, #a68bd0);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 8px 25px #c38bb966;
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px #c38bb999;
+}
+
+/* Gallery */
+
+.gallery {
+    background: white;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.photo-card {
+    background: white;
+    padding: 10px 10px 18px;
+    box-shadow: 0 8px 30px #b99aae22;
+    border-radius: 5px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.photo-card:nth-child(even) {
+    transform: translateY(20px) rotate(2deg);
+}
+
+.photo-card:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+.photo-card:hover {
+    transform: translateY(-10px) rotate(0);
+    box-shadow: 0 15px 35px #b99aae44;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+}
+
+.photo-card p {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 25px;
+    margin-top: 12px;
+    color: #bd7198;
+}
+
+/* Special Family Group Photo */
+.group-photo {
+    max-width: 1100px;
+    margin: 65px auto 10px;
+    padding: 15px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px #b99aae33;
+    text-align: center;
+    transition: .4s;
+}
+
+.group-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px #b99aae55;
+}
+
+.group-photo img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    cursor: pointer;
+}
+
+.group-photo h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #bd7198;
+    margin-top: 18px;
+}
+
+.group-photo p {
+    color: #927f96;
+    font-size: 14px;
+    margin: 8px 0 12px;
+}
+
+/* Sister message */
+
+.message-section {
+    background: linear-gradient(135deg, #f9eaf2, #eee8fa);
+}
+
+.message-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 55px 40px;
+    background: #ffffffc9;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 45px #9c7b9a22;
+    position: relative;
+}
+
+.message-card .heart {
+    font-size: 40px;
+}
+
+.message-card h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    color: #bd7198;
+    margin: 15px 0;
+}
+
+.message-card p {
+    color: #806c86;
+    line-height: 2.1;
+    font-size: 15px;
+}
+
+/* Memories */
+
+.memories {
+    background: #fff9fc;
+}
+
+.memory-list {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.memory {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 25px #bd9bb022;
+    transition: .3s;
+}
+
+.memory:hover {
+    transform: translateY(-5px);
+}
+
+.memory span {
+    font-size: 30px;
+}
+
+.memory h3 {
+    margin: 12px 0 8px;
+    font-family: 'Playfair Display', serif;
+    color: #ad6b96;
+}
+
+.memory p {
+    color: #917f95;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+/* Birthday cake */
+
+.celebration {
+    text-align: center;
+    background: linear-gradient(135deg, #e8dafa, #fce4ee);
+}
+
+.cake {
+    font-size: 100px;
+    margin: 25px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    50% { transform: translateY(-12px); }
+}
+
+.celebration h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #b76b9b;
+}
+
+.celebration p {
+    color: #856d91;
+    margin: 15px 0 25px;
+}
+
+/* Letter */
+
+.letter-section {
+    text-align: center;
+    background: white;
+}
+
+.letter-box {
+    max-width: 650px;
+    margin: auto;
+    background: #fff5f9;
+    border: 1px solid #f2d4e3;
+    border-radius: 20px;
+    padding: 35px 25px;
+}
+
+.letter-box h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+    color: #c06e9b;
+    margin-bottom: 15px;
+}
+
+.letter-box p {
+    line-height: 2;
+    color: #806d84;
+    margin-bottom: 20px;
+}
+
+#letter {
+    display: none;
+    animation: reveal 1s ease;
+}
+
+@keyframes reveal {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+
+footer {
+    background: #59445f;
+    color: #f9e6f1;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+    font-size: 13px;
+}
+
+footer strong {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+}
+
+/* Lightbox */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #211326ed;
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Confetti */
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    width: 9px;
+    height: 14px;
+    z-index: 30;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Background music control */
+.music-toggle {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 40;
+    border: 1px solid #ffffffaa;
+    border-radius: 999px;
+    padding: 12px 18px;
+    color: white;
+    background: linear-gradient(135deg, #d987ad, #a68bd0);
+    box-shadow: 0 8px 25px #c38bb966;
+    font-size: 13px;
+    font-weight: 700;
+}
+.music-toggle:hover { transform: translateY(-2px); }
+
+/* Responsive */
+
+@media(max-width: 750px) {
+    nav {
+        padding: 18px 5%;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 11px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .photo-card img {
+        height: 190px;
+    }
+
+    .group-photo {
+        margin-top: 45px;
+        padding: 10px;
+    }
+
+    .group-photo img {
+        height: 280px;
+    }
+
+    .group-photo h3 {
+        font-size: 32px;
+    }
+
+    .memory-list {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+}
+
+@media(max-width: 420px) {
+    .logo { font-size: 24px; }
+    nav a { margin-left: 6px; font-size: 10px; }
+    .photo-card img { height: 150px; }
+    .message-card { padding: 35px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Birthday background music -->
+<audio id="birthdayMusic" loop preload="auto">
+    <!-- Place a royalty-free or personally licensed MP3 named birthday-theme.mp3
+         in the same folder as this HTML file. -->
+    <source src="./HAPPY BIRTHDAY TO YOU PIANO INSTRUMENTAL BEST HAPPY BITHDAY MUSIC 2021 - Benote (320k).mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" class="music-toggle" type="button" aria-label="Play birthday music">
+    ♪ Play Birthday Music
+</button>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">For Moontaha ♡</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#gallery">Photos</a>
+        <a href="#letter-section">Letter</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+
+        <span class="eyebrow">✦ A DAY FULL OF LOVE ✦</span>
+
+        <h1>Happy Birthday</h1>
+
+        <h2>To My Dearest Sister, Moontaha ♡</h2>
+
+        <p>
+            Another year of beautiful memories, endless smiles,
+            and countless blessings. Today, the world celebrates
+            someone truly special.
+        </p>
+
+        <img
+            src="./Moon 4.png"
+            alt="Moontaha"
+            class="hero-image"
+        >
+
+        <br><br>
+
+        <a href="#gallery" class="primary-btn">
+            Explore Your Memories ↓
+        </a>
+
+    </div>
+</section>
+
+<!-- Photo Gallery -->
+<section class="gallery" id="gallery">
+
+    <div class="section-heading">
+        <small>OUR LITTLE WORLD</small>
+        <h2>Beautiful Memories ♡</h2>
+        <p>Some moments deserve to stay forever.</p>
+    </div>
+
+    <div class="photo-grid">
+
+        <div class="photo-card">
+            <img src="./Moon 2.png"
+                 alt="Memory 1" onclick="openPhoto(this)">
+            <p>Sweet Moments</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="./Moon 1.png"
+                 alt="Memory 2" onclick="openPhoto(this)">
+            <p>Candid One</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="./Moon 3 (1).png"
+                 alt="Memory 4" onclick="openPhoto(this)">
+            <p>Jolly One</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="./Moon 5.png"
+                 alt="Memory 3" onclick="openPhoto(this)">
+            <p>Beautiful Moments</p>
+        </div>
+
+    </div>
+
+    <!-- Special Family Group Photograph -->
+    <div class="group-photo">
+        <img
+            src="./g1.jpg"
+            alt="Our Beautiful Family"
+            onclick="openPhoto(this)"
+        >
+        <h3>Our Call of Jalsha ♡</h3>
+        <p>
+            Different faces, one beautiful family,
+            countless memories. Forever together!
+        </p>
+    </div>
+
+</section>
+
+<!-- Sister Message -->
+<section class="message-section">
+
+    <div class="message-card">
+
+        <div class="heart">💗</div>
+
+        <h2>To My Lovely Sister</h2>
+
+        <p>
+            Life is more beautiful with a sister like you.
+            Through all the little arguments, funny moments,
+            laughter and memories, you have always been
+            an important part of my life.
+            <br><br>
+
+            I may not say it every day, but I genuinely
+            wish to see you happy, successful and smiling
+            throughout your life.
+            <br><br>
+
+            <strong>Lots of love, always. ♡</strong>
+        </p>
+
+    </div>
+</section>
+
+<!-- Memory Cards -->
+<section class="memories">
+
+    <div class="section-heading">
+        <small>A LITTLE REMINDER</small>
+        <h2>Things I Wish For You</h2>
+        <p>Because you deserve nothing less than the best.</p>
+    </div>
+
+    <div class="memory-list">
+
+        <div class="memory">
+            <span>🌷</span>
+            <h3>Endless Happiness</h3>
+            <p>May your days always be filled with laughter,
+            peace and beautiful surprises.</p>
+        </div>
+
+        <div class="memory">
+            <span>✨</span>
+            <h3>Dreams Come True</h3>
+            <p>May every dream you work for become
+            a beautiful reality.</p>
+        </div>
+
+        <div class="memory">
+            <span>🦋</span>
+            <h3>Beautiful Adventures</h3>
+            <p>May life take you to amazing places
+            and give you unforgettable experiences.</p>
+        </div>
+
+        <div class="memory">
+            <span>💖</span>
+            <h3>Love & Blessings</h3>
+            <p>May you always be surrounded by
+            genuine love and people who care.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Celebration -->
+<section class="celebration">
+
+    <div class="section-heading">
+        <small>LET'S CELEBRATE</small>
+        
+    </div>
+
+    <div class="cake">🎂</div>
+
+    <h2>Happy Birthday, Moontaha!</h2>
+
+    <p>Close your eyes, make a wish and let the magic begin.</p>
+
+    <button class="primary-btn" onclick="celebrate()">
+        🎉 Celebrate!
+    </button>
+
+</section>
+
+<!-- Personal Letter -->
+<section class="letter-section" id="letter-section">
+
+    <div class="section-heading">
+        <small>ONE LAST SURPRISE</small>
+        <h2>A Letter From Call of Jalsha</h2>
+    </div>
+
+    <div class="letter-box">
+
+        <h2>Dear Moontaha ♡</h2>
+
+        <p>
+            There is something want to tell you...
+        </p>
+
+        <button class="primary-btn" onclick="openLetter()">
+            💌 Open Your Letter
+        </button>
+
+        <div id="letter">
+
+            <br>
+
+            <p>
+                Dear Sister,
+                <br><br>
+                No matter how much we argue or tease each other,
+                you will always have a special place in our heart.
+                <br><br>
+                We hope you achieve everything you dream of.
+                Keep growing, keep smiling and never doubt
+                how special you are.
+                <br><br>
+                Life will bring many different chapters,
+                but remember that you will always have
+                Call-of-Jalsha cheering for you.
+                <br><br>
+                May Allah bless you with good health,
+                happiness, success and a beautiful future.
+                <br><br>
+                With lots of love,
+                <br>
+                <strong>Call-of-Jalsha ❤️</strong>
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <strong>Made with Love ♡</strong>
+    <br>
+    A little birthday surprise for Moontaha.
+    <br>
+    © 2026 | Call of Jalsha
+</footer>
+
+<!-- Photo Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closePhoto()">
+    <span class="close">&times;</span>
+    <img id="largePhoto" src="" alt="Expanded memory">
+</div>
+
+<script>
+
+// Birthday background music
+const birthdayMusic = document.getElementById("birthdayMusic");
+const musicToggle = document.getElementById("musicToggle");
+
+async function startBirthdayMusic() {
+    try {
+        await birthdayMusic.play();
+        musicToggle.textContent = "♫ Music On — Pause";
+        musicToggle.setAttribute("aria-label", "Pause birthday music");
+    } catch (error) {
+        // Audible autoplay may be blocked until the visitor interacts.
+        musicToggle.textContent = "♪ Play Birthday Music";
+    }
+}
+
+function toggleBirthdayMusic() {
+    if (birthdayMusic.paused) {
+        startBirthdayMusic();
+    } else {
+        birthdayMusic.pause();
+        musicToggle.textContent = "♪ Play Birthday Music";
+        musicToggle.setAttribute("aria-label", "Play birthday music");
+    }
+}
+
+musicToggle.addEventListener("click", toggleBirthdayMusic);
+window.addEventListener("load", startBirthdayMusic);
+
+// Floating hearts and stars
+const symbols = ["♡", "✨", "🌸", "💗", "⭐", "💕"];
+
+function createFloat() {
+    const item = document.createElement("div");
+    item.className = "float";
+
+    item.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.fontSize = (15 + Math.random() * 20) + "px";
+    item.style.color = "#d987ad";
+    item.style.animationDuration = (6 + Math.random() * 7) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(), 13000);
+}
+
+setInterval(createFloat, 700);
+
+
+// Open photo
+function openPhoto(img) {
+    document.getElementById("largePhoto").src = img.src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closePhoto() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+
+// Open letter
+function openLetter() {
+    const letter = document.getElementById("letter");
+
+    letter.style.display = "block";
+
+    letter.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+    launchConfetti();
+}
+
+
+// Birthday celebration
+function celebrate() {
+    launchConfetti();
+
+    alert("Happy Birthday Moontaha! 💗 May all your wishes come true!");
+}
+
+
+// Confetti
+function launchConfetti() {
+
+    const colors = [
+        "#e98bb8",
+        "#b59add",
+        "#ffd166",
+        "#ffffff",
+        "#ff8caa",
+        "#a8e6cf"
+    ];
+
+    for (let i = 0; i < 150; i++) {
+
+        const piece = document.createElement("div");
+        piece.className = "confetti";
+
+        piece.style.left = Math.random() * 100 + "vw";
+
+        piece.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        piece.style.animationDuration =
+            (2 + Math.random() * 3) + "s";
+
+        piece.style.animationDelay =
+            Math.random() + "s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => piece.remove(), 6000);
+    }
+}
+
+</script>
+
+</body>
+</html>
